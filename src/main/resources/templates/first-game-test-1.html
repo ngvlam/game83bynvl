@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="fragments/header.html::head_page">
+<body>
+   <div class="cau-hoi">
+       <div class="container">
+           <div class="section">
+               <div class="box-name">
+
+                   <h1 class="mt-4">Câu hỏi thứ 1</h1>
+                   <h2 class="heading-question">Đây là ai?</h2>
+                   <div id="clock">
+                       <span id="seconds">15</span>
+                   </div>
+                   <div class="question-img-box">
+                       <img th:src="@{/img/Screenshot 2023-03-07 094254.png}" alt="" class="question-img">
+                   </div>
+                   <!--                Score: <span id="score-span"></span>-->
+                   <!--                <meter id="score-meter" min="0" low="5" max="20"></meter>-->
+                   <ul style="list-style: none" class="row" id="lua-chon-cua-ban">
+                       <li class="col-lg-6"><button data-answer="A" class="btn-opinion-test">A. Sơn Tùng MTP </button></li>
+                       <li class="col-lg-6"><button data-answer="B" class="btn-opinion-test">B. Đức Phúc</button></li>
+                       <li class="col-lg-6"6><button data-answer="C" class="btn-opinion-test">C. Mono</button></li>
+                       <li class="col-lg-6"> <button data-answer="D" class="btn-opinion-test">D. Không phải các đáp án trên</button></li>
+                   </ul>
+
+
+                   <a th:href="@{/first-game-test-2}" class="question-next-link">Qua câu tiếp theo>>></a>
+
+               </div>
+           </div>
+       </div>
+   </div>
+   <span  id="username">@[[${session.user.name}]]</span>
+
+    <script th:src="@{/js/jquery-3.5.1.min.js}"></script>
+    <script th:src="@{/js/bootstrap.min.js}"></script>
+    <script th:src="@{/js/main.js}"></script>
+    <script th:src="@{/js/handle-question.js}"></script>
+    <script>
+        localStorage.setItem('scoreTest', '0')
+    </script>
+</body>
+</html>

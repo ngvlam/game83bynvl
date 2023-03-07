@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="fragments/header.html::head_page">
+<body>
+<div class="cau-hoi">
+    <div class="container">
+        <div class="section">
+            <div class="box-name">
+
+                <h1 class="mt-4">Câu hỏi thứ [[${question.id}]]</h1>
+                <h2 class="heading-question">[[${question.name}]]</h2>
+                <div id="clock">
+                    <span id="seconds">15</span>
+                </div>
+                <div class="question-img-box">
+                    <img th:src="@{${question.photo}}" alt="" class="question-img">
+                </div>
+                <!--                Score: <span id="score-span"></span>-->
+                <!--                <meter id="score-meter" min="0" low="5" max="20"></meter>-->
+                <ul style="list-style: none" class="row" id="lua-chon-cua-ban">
+                    <li class="col-lg-6 "><button data-answer="A" class="btn-opinion red">[[${question.dap_an_1}]] </button></li>
+                    <li class="col-lg-6"><button data-answer="B" class="btn-opinion blue">[[${question.dap_an_2}]]</button></li>
+                    <li class="col-lg-6"6><button data-answer="C" class="btn-opinion yellow">[[${question.dap_an_3}]]</button></li>
+                    <li class="col-lg-6"> <button data-answer="D" class="btn-opinion green">[[${question.dap_an_4}]]</button></li>
+                </ul>
+
+
+                <div th:if="${question.id} < 15">
+                    <a th:href="@{'/first-game-quiz/'+ ${question.id + 1 } }" class="question-next-link">Qua câu tiếp theo>>></a>
+                </div>
+                <div th:if="${question.id} == 15">
+                    <a th:href="@{'/end-1'}" class="question-next-link">Kết thúc>>></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<span id="username">@[[${session.user.name}]]</span>
+
+<script th:src="@{/js/jquery-3.5.1.min.js}"></script>
+<script th:src="@{/js/bootstrap.min.js}"></script>
+<script th:src="@{/js/main.js}"></script>
+<script th:inline="javascript">
+    let answer = [[${question.answer}]];
+</script>
+<script  th:src="@{/js/handle-question-real.js}"></script>
+<script>
+    var music = new Audio();
+    let url = "[[@{/audio/bg-ask.mp3}]]"
+    music.src = url
+    music.play();
+</script>
+</body>
+</html>

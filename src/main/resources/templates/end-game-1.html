@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="fragments/header.html::head_page">
+</head>
+
+</head>
+<body style="background-color: #fff8f7">
+<div class="main">
+    <div class="wish">
+        <div class="wish-title">
+            Chúc [[${session.user.name}]] một ngày 8/3 thật là vui vẻ ^^
+            <img src="/img/pinkrose.png" alt="" width="200" style="display: block; margin: 0 auto">
+        </div>
+        <div class="hoa-thiep-img-box">
+            <img th:src="@{/img/hoa-thiep.png}" alt="">
+        </div>
+    </div>
+    <div class="container">
+        <div class="section">
+            <div class="box-name">
+                <h1 class="text-center mt-4 p-3"><b>KẾT QUẢ SAU TRÒ CHƠI ĐẦU TIÊN</b></h1>
+               <p class="heading" style="padding: 15px">ĐIỂM ĐẠT ĐƯỢC</p>
+                <img th:src="@{/img/anh-bo-hoa.png}" alt="" class="anh-bo-hoa-end">
+                <p id="real-score-text"></p>
+
+                <form id="formDiem" th:action="@{/saveDiem}" method="post">
+                    <input type="hidden" name="id" th:value="${session.user.id}">
+                    <input type="hidden" name="current_level" value="2">
+<!--                    <input type="hidden" name="name" th:value="${session.user.name}">-->
+                    <input type="hidden" name="score" id="real-score-input">
+                    <button class="bang-xep-hang-link">Đi đến bảng xếp hạng>>>></button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<script th:src="@{/js/jquery-3.5.1.min.js}"></script>
+<script th:src="@{/js/bootstrap.min.js}"></script>
+<script th:src="@{/js/main.js}"></script>
+<script>
+    $("#real-score-text").text(localStorage.getItem('scoreReal'))
+    $('#real-score-input').val(localStorage.getItem('scoreReal'))
+    var music = new Audio();
+    let url = "[[@{/audio/firstdate.mp3}]]"
+    music.src = url
+    music.loop = true;
+    music.play();
+</script>
+</body>
+</html>

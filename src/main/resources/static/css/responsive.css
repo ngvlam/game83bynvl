@@ -1,0 +1,124 @@
+/* Smartphones (portrait and landscape) ----------- */
+@media only screen and (min-device-width:320px)and (max-device-width:480px) {
+    .box-name_img {
+        border-radius: 20px 20px 0 0;
+    }
+
+    .box-name .heading {
+        font-size: 2.8rem;
+        padding: 5px;
+    }
+
+    .mobile-img-box{
+        height: 400px;
+    }
+
+    .box-name {
+        margin-top: 30px;
+    }
+
+    .player-name {
+        margin-left: 15px;
+    }
+
+    .play-game-btn {
+        position: relative;
+        margin-left: 20%;
+    }
+
+    .box-name .error {
+    }
+
+    .btn-play {
+        width: 90%;
+    }
+
+    .section {
+        min-height: 80vh;
+    }
+
+    .tip {
+        font-size: 2.4rem;
+        padding: 10px;
+    }
+
+    .heading-question {
+        margin: 15px auto;
+        font-size: 20px;
+        width: 340px;
+    }
+
+    .cau-hoi .box-name {
+        padding: 0;
+    }
+
+    #clock #seconds {
+        position: relative;
+        left: calc(50% - 25px);
+    }
+
+    .question-img-box {
+        margin: 40px 0;
+    }
+
+    .col-lg-6 {
+        padding-right: 25px;
+    }
+    .bang-xep-hang-link {
+        font-size: 24px;
+    }
+
+
+    .hoa-thiep-img-box img{
+        display: none;
+
+    }
+
+
+    .wish-title {
+        width: 100%;
+        padding-top: 30px;
+        margin-left: 0;
+    }
+}
+    /* Smartphones (landscape) ----------- */
+    @media only screen and (min-width:321px) {
+        /* Styles */
+    }
+        /* Smartphones (portrait) ----------- */
+        @media only screen and (max-width:320px) {
+            /* Styles */
+        }
+            /* iPads (portrait and landscape) ----------- */
+            @media only screen and (min-device-width:768px)and (max-device-width:1024px) {
+                /* Styles */
+            }
+                /* iPads (landscape) ----------- */
+                @media only screen and (min-device-width:768px)and (max-device-width:1024px)and (orientation:landscape) {
+                    /* Styles */
+                }
+                    /* iPads (portrait) ----------- */
+                    @media only screen and (min-device-width:768px)and (max-device-width:1024px)and (orientation:portrait) {
+                        /* Styles */
+                    }
+                        /* Desktops and laptops ----------- */
+                        @media only screen and (min-width:1224px) {
+                            /* Styles */
+                        }
+                            /* Large screens ----------- */
+                            @media only screen and (min-width:1824px) {
+                                /* Styles */
+                            }
+                                /* iPhone 4 - 5s ----------- */
+/* iPhone 4 - 5s ----------- */
+@media only screen and (-webkit-min-device-pixel-ratio:1.5),only screen and (min-device-pixel-ratio:1.5) {
+    /* Styles */
+}
+/* iPhone 6 ----------- */
+@media only screen and (max-device-width:667px), only screen and (-webkit-device-pixel-ratio:2) {
+    /* Styles */
+}
+/* iPhone 6+----------- */
+@media only screen and (min-device-width:414px), only screen and (-webkit-device-pixel-ratio:3) {
+    /*** You've spent way too much on a phone ***/
+}

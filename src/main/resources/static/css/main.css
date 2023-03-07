@@ -1,0 +1,276 @@
+* {
+    font-family: 'Tilt Neon', cursive;
+}
+
+body {
+    background-color: #FEE9E9;
+}
+
+.box-name .heading {
+    font-size: 3rem;
+    padding-top: 50px;
+    color: #E24D4D;
+}
+
+.section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    min-height: 100vh;
+}
+
+.box-name {
+    background-color: #fff;
+    border: 1px solid #fff;
+    border-radius: 20px;
+    position: relative;
+}
+
+.box-name_img {
+    border-radius: 20px 0 0 20px;
+    width: 100%;
+    height: 100%;
+}
+
+.player-name {
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    font-size: 2rem;
+    margin-right: 15px;
+}
+
+.player-name.active {
+    border: 2px solid #FF2765;
+    color: #FF2765;
+    background-color: #FFDEE7;
+}
+
+.player-name:hover {
+    border: 2px solid #FF2765;
+    color: #FF2765;
+}
+
+.play-game-btn {
+    color: #FF2765;
+    font-weight: bold;
+    font-size: 2rem;
+    position: absolute;
+    bottom: 10px;
+    right: 35px;
+    cursor: pointer;
+    border: none;
+    background: none;
+}
+
+.play-game-btn:hover {
+    text-shadow: 0 0 5px;
+}
+
+.box-name .error {
+    display: none;
+    color: red;
+    text-align: left;
+    font-size: 20px;
+    animation-name: error-anim;
+    animation-duration: 1s;
+}
+
+@keyframes error-anim {
+    from {
+        transform: translateX(-40px);
+    }
+    to {
+        transform: translateX(2px);
+    }
+}
+
+/*==================QUIZZZ===================*/
+.tip {
+    font-size: 3rem;
+    padding: 50px;
+}
+
+.btn-play:hover {
+    text-decoration: none;
+    font-weight: bold;
+    box-shadow: 2px 2px 2px 2px #FF2765;
+}
+
+.btn-play {
+    display: block;
+    padding: 10px;
+    width: 50%;
+    margin: 0 auto;
+    font-size: 20px;
+    border-radius: 10px;
+}
+
+.btn-choi-thu {
+    border: 2px solid #FF2765;
+    color: #FF2765;
+}
+
+.btn-choi-that {
+    border: 2px solid #FF2765;
+    color: #FF2765;
+    background-color: #FFDEE7;
+    margin-bottom: 50px;
+}
+
+
+#clock #seconds {
+
+    display: block;
+    font-size: 24px;
+    --seconds-height: 50px;
+    height: var(--seconds-height);
+    width: 50px;
+    background-color: #FF2765;
+    border-radius: 50%;
+    color: #fff;
+    line-height: 50px;
+    position: absolute;
+    top: 50% ;
+    left: 40px;
+    margin-right: 40px;
+}
+
+.question-next-link {
+    display: none;
+    font-size: 24px;
+}
+
+.btn-opinion-test {
+    width: 100%;
+    height: 40px;
+    font-size: 18px;
+    margin: 10px;
+}
+
+
+.btn-opinion {
+    width: 100%;
+    height: 80px;
+    font-size: 24px;
+    margin: 4px;
+    border: none;
+    color: #fff;
+}
+
+.btn-opinion:hover {
+    font-weight: bold;
+    box-shadow: 10px 10px #0f6674;
+}
+
+.btn-opinion.red {
+    background-color: red;
+    box-shadow: 2px 2px red;
+}
+
+.btn-opinion.blue {
+    background-color: blue;
+    box-shadow: 2px 2px blue;
+
+}
+
+.btn-opinion.green {
+    background-color: green;
+    box-shadow: 2px 2px green;
+
+}
+
+.btn-opinion.yellow {
+    background-color: #FFC801;
+    box-shadow: 2px 2px #FFC801;
+
+}
+
+.btn-opinion-test.active {
+    font-weight: bold;
+    border: 4px solid red;
+}
+
+.btn-opinion.active {
+    font-weight: bold;
+    height: 90px;
+    box-shadow: 10px 10px #0f6674;
+}
+
+.question-img-box {
+    margin: 40px 120px;
+}
+
+.question-img {
+    width: 300px;
+}
+
+.heading-question {
+    padding: 5px;
+    box-shadow: 2px 2px 2px 2px #ddd;
+}
+
+.cau-hoi .box-name {
+    padding: 50px;
+}
+
+ul {
+    padding-left: 0;
+}
+
+#real-score-text {
+    color: #007bff;
+    font-size: 4rem;
+}
+
+.anh-bo-hoa-end {
+    width: 100px;
+    border-radius: 20px;
+}
+
+.bang-xep-hang-link {
+    color: #FF2765;
+    font-weight: bold;
+    font-size: 2rem;
+    bottom: 10px;
+    right: 35px;
+    cursor: pointer;
+    border: none;
+    background: none;
+    margin: 10px;
+}
+
+#username {
+    position: relative;
+    bottom: 4px;
+    left: 4px;
+}
+
+.wish {
+    position: relative;
+    height: 100vh;
+}
+/**/
+.wish-title {
+    font-size: 80px;
+    font-family: Pacifico;
+    width: 50%;
+    padding-top: 30vh;
+    text-align: center;
+    color: #c1703b;
+    margin-left: 20px;
+    line-height: 1.5;
+}
+
+.hoa-thiep-img-box {
+    position: absolute;
+    top: 0;
+    right: -10px;
+}
+
+.hoa-thiep-img-box img {
+    height: 100vh;
+}

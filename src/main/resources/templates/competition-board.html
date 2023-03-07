@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="fragments/header.html::head_page">
+</head>
+
+</head>
+<body>
+<div class="main">
+    <div class="container">
+        <div class="section">
+            <div class="box-name">
+                <p class="heading" style="padding: 15px">BẢNG TỔNG KẾT</p>
+                <div th:each="user: ${users}">
+                    <p style="font-size: 30px">[[${user.name}]]: <span style="color: #005cbf">[[${user.score}]]</span></p>
+                    <hr>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script th:src="@{/js/jquery-3.5.1.min.js}"></script>
+<script th:src="@{/js/bootstrap.min.js}"></script>
+<script th:src="@{/js/main.js}"></script>
+<script>
+
+</script>
+</body>
+</html>
