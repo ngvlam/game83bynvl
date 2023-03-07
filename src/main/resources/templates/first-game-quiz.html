@@ -25,10 +25,10 @@
                 </ul>
 
 
-                <div th:if="${question.id} < 15">
+                <div th:if="${question.id} < 17">
                     <a th:href="@{'/first-game-quiz/'+ ${question.id + 1 } }" class="question-next-link">Qua câu tiếp theo>>></a>
                 </div>
-                <div th:if="${question.id} == 15">
+                <div th:if="${question.id} == 17">
                     <a th:href="@{'/end-1'}" class="question-next-link">Kết thúc>>></a>
                 </div>
             </div>
